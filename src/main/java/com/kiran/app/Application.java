@@ -15,7 +15,7 @@ public class Application {
 	public static void main(String args[]) {
 		try {
 			SessionFactory sf = new Configuration().configure().buildSessionFactory();
-			Session session = sf.openSessionFactory();
+			Session session = sf.openSession();
 			Transaction tx = session.beginTransaction();
 
 			UserDetails user = new UserDetails();

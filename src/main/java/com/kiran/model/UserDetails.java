@@ -3,14 +3,14 @@ package com.kiran.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistense.*;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 public class UserDetails {
 	@Id
-	@GeneraterValue(strategy=GeneraterType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	private String userName;
 }

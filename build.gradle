@@ -22,13 +22,28 @@ dependencies {
 jar {
 	baseName = "app"
 	version = "0.1.0"
-	from {
+    from ("src/resources") {
+        include ("hibernate.cfg.xml")
+        into ("")
+    }
+    /* This is required to add all the dependencies into the application jar file	
+    from {
 		configurations.runtime.collect {
 			it.isDirectory() ? it : zipTree(it)
 		}
 	}
+	*/
 	manifest {
-		attributes 'Main-Class': mainClassName
+		attributes 'Main-Class': mainClassName,
+                   'Class-Path': configurations.runtime.files.collect { "lib/$it.name"}.join(' ')
+        
 	}
 }
 
+/* This is to copy all the dependency jars to lib folder parallel to application jar file */
+task copyToLib(type: Copy) {
+    into "$buildDir/libs/lib"
+    from configurations.runtime
+}
+
+build.dependsOn(copyToLib)
