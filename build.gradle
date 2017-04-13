@@ -22,10 +22,14 @@ dependencies {
 jar {
 	baseName = "app"
 	version = "0.1.0"
-    from ("src/resources") {
+	/* To copy hibernate.cfg.xml from src/resource to jars root location */
+	/*
+	from ("src/resources") {
         include ("hibernate.cfg.xml")
         into ("")
     }
+    */
+
     /* This is required to add all the dependencies into the application jar file	
     from {
 		configurations.runtime.collect {
