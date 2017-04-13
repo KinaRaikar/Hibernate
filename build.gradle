@@ -1,4 +1,4 @@
-aipply plugin: 'java'
+apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
 
@@ -13,14 +13,14 @@ repositories {
 
 dependencies {
 	compile "org.projectlombok:lombok:1.16.10"
-	cvaompile "mysql:mysql-connector-java:5.1.16"
+	compile "mysql:mysql-connector-java:5.1.16"
 	compile "org.hibernate:hibernate-gradle-plugin:5.2.9.Final"
 	testCompile "junit:junit:4.12"
 	testCompile "org.hamcrest:hamcrest-all:1.3"
 }
 
 jar {
-	baseName = "app.jar"
+	baseName = "app"
 	version = "0.1.0"
 	from {
 		configurations.runtime.collect {
@@ -28,7 +28,7 @@ jar {
 		}
 	}
 	manifest {
-		attributes 'Main-class': mainClassName
+		attributes 'Main-Class': mainClassName
 	}
 }
 
