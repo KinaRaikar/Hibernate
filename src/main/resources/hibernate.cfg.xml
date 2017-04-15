@@ -12,5 +12,8 @@
 
 		<mapping class="com.kiran.model.UserDetails"/>
 		<mapping class="com.kiran.model.Vehicle"/>
+
+		<mapping class="com.kiran.model.UserDetailsO2M"/>
+		<mapping class="com.kiran.model.VehicleM2O"/>
 	</session-factory>
 </hibernate-configuration>
