@@ -2,6 +2,7 @@ package com.kiran.app;
 
 import com.kiran.model.UserDetails;
 
+import com.kiran.model.Vehicle;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
@@ -21,7 +22,12 @@ public class Application {
 			UserDetails user = new UserDetails();
 			user.setUserName("First User");
 
+			Vehicle vehicle = new Vehicle();
+			vehicle.setVehicleName("Bike");
+			user.setVehicle(vehicle);
+
 			session.save(user);
+			session.save(vehicle);
 
 			tx.commit();
 			session.close();

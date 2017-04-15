@@ -11,5 +11,6 @@
 		<property name="show_sql">true</property>
 
 		<mapping class="com.kiran.model.UserDetails"/>
+		<mapping class="com.kiran.model.Vehicle"/>
 	</session-factory>
 </hibernate-configuration>

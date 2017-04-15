@@ -13,4 +13,8 @@ public class UserDetails {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	private String userName;
+
+	@OneToOne
+	@JoinColumn(name = "vehicle_id")
+	private Vehicle vehicle;
 }
