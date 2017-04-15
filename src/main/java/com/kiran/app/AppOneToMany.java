@@ -20,10 +20,17 @@ public class AppOneToMany {
 
 			VehicleM2O vehicle = new VehicleM2O();
 			vehicle.setVehicleName("Bike");
+			vehicle.setUserDetailsO2M(user);
 			user.getVehicles().add(vehicle);
+
+            VehicleM2O vehicle1 = new VehicleM2O();
+            vehicle1.setVehicleName("Car");
+            vehicle1.setUserDetailsO2M(user);
+            user.getVehicles().add(vehicle1);
 
 			session.save(user);
 			session.save(vehicle);
+            session.save(vehicle1);
 
 			tx.commit();
 			session.close();

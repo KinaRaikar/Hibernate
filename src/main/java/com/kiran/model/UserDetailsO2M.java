@@ -22,7 +22,7 @@ public class UserDetailsO2M {
 
     private String userName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "userDetailsO2M")
     private Collection<VehicleM2O> vehicles = new ArrayList<>();
 
 }

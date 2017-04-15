@@ -18,4 +18,8 @@ public class VehicleM2O {
     private int vehicleId;
 
     private String vehicleName;
+
+    @ManyToOne
+    @JoinColumn(name = "userId", nullable=false)
+    private UserDetailsO2M userDetailsO2M;
 }
