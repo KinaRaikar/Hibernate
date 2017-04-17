@@ -31,5 +31,11 @@
         <mapping class="com.kiran.model.strategy.tablePerClass.FourWheelerTPC"/>
         <!-- END: Hibernate Inheritance Table Per Class Strategy -->
 
+        <!-- START: Hibernate Inheritance Table Per Sub Class (JOINED) Strategy -->
+        <mapping class="com.kiran.model.strategy.tablePerSubClass.VehicleTPSC"/>
+        <mapping class="com.kiran.model.strategy.tablePerSubClass.TwoWheelerTablePerSubClass"/>
+        <mapping class="com.kiran.model.strategy.tablePerSubClass.FourWheelerTablePerSubClass"/>
+        <!-- END: Hibernate Inheritance Table Per Sub Class (JOINED) Strategy -->
+
 	</session-factory>
 </hibernate-configuration>
