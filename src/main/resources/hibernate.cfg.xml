@@ -18,5 +18,11 @@
 
         <mapping class="com.kiran.model.UserDetailsM2M"/>
         <mapping class="com.kiran.model.VehicleM2M"/>
+
+		<!-- START: Hibernate Inheritance Single Table Strategy -->
+        <mapping class="com.kiran.model.strategy.singleTable.Vehicle"/>
+        <mapping class="com.kiran.model.strategy.singleTable.TwoWheeler"/>
+        <mapping class="com.kiran.model.strategy.singleTable.FourWheeler"/>
+        <!-- END: Hibernate Inheritance Single Table Strategy -->
 	</session-factory>
 </hibernate-configuration>
