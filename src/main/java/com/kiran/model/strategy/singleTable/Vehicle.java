@@ -13,6 +13,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "VEHICLE_SINGLE_TABLE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "VEHICLE_TYPE",
+        discriminatorType = DiscriminatorType.STRING)
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

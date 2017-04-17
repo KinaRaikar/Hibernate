@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "TWO_WHEELER_SINGLE_TABLE")
+@DiscriminatorValue(value = "BIKE")
 public class TwoWheeler extends Vehicle {
     @Column(name = "STEERING_TYPE")
     private String steeringType;
