@@ -13,8 +13,8 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name = "TWO_WHEELER_TABLE_PER_CLASS")
-public class TwoWheelerTPC extends VehicleTPC {
+@Table(name = "FOUR_WHEELER_TABLE_PER_CLASS")
+public class FourWheelerTPC extends VehicleTPC {
     @Column(name = "STEERING_TYPE")
-    private String SteeringType;
+    private String steeringType;
 }

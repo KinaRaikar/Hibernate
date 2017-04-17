@@ -24,5 +24,12 @@
         <mapping class="com.kiran.model.strategy.singleTable.TwoWheeler"/>
         <mapping class="com.kiran.model.strategy.singleTable.FourWheeler"/>
         <!-- END: Hibernate Inheritance Single Table Strategy -->
+
+        <!-- START: Hibernate Inheritance Table Per Class Strategy -->
+        <mapping class="com.kiran.model.strategy.tablePerClass.VehicleTPC"/>
+        <mapping class="com.kiran.model.strategy.tablePerClass.TwoWheelerTPC"/>
+        <mapping class="com.kiran.model.strategy.tablePerClass.FourWheelerTPC"/>
+        <!-- END: Hibernate Inheritance Table Per Class Strategy -->
+
 	</session-factory>
 </hibernate-configuration>
